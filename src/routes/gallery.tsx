@@ -1,70 +1,61 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import smile1 from "@/assets/smile-1.jpg";
-import smile2 from "@/assets/smile-2.jpg";
-import smile3 from "@/assets/smile-3.jpg";
-import veneers from "@/assets/veneers.jpg";
-import hero from "@/assets/hero-smile.png";
+import { Instagram } from "lucide-react";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Smile Gallery — Korean Smile Dental" },
-      { name: "description", content: "Real smile transformations from patients of Korean Smile Dental." },
-      { property: "og:title", content: "Smile Gallery — Korean Smile Dental" },
-      { property: "og:description", content: "Real smile transformations from our patients." },
+      { title: "Instagram — Korean Smile Dental" },
+      { name: "description", content: "Follow Korean Smile Dental on Instagram — @_koreansmiledental. Real smiles, treatments and behind-the-scenes from our Kilimani clinic." },
+      { property: "og:title", content: "Instagram — Korean Smile Dental" },
+      { property: "og:description", content: "Real smiles and stories from @_koreansmiledental." },
       { property: "og:url", content: "/gallery" },
     ],
     links: [{ rel: "canonical", href: "/gallery" }],
   }),
-  component: GalleryPage,
+  component: InstagramPage,
 });
 
-const ITEMS = [
-  { src: smile1, label: "Whitening + Scaling", w: 896, h: 1120 },
-  { src: hero, label: "Veneers — Cosmetic Reshape", w: 1280, h: 1600 },
-  { src: smile3, label: "Smile Design", w: 896, h: 1120 },
-  { src: veneers, label: "Single Veneer Detail", w: 1024, h: 1280 },
-  { src: smile2, label: "Invisalign — 9 months", w: 896, h: 1120 },
-  { src: smile1, label: "Crowns + Whitening", w: 896, h: 1120 },
-];
+const INSTAGRAM_URL = "https://www.instagram.com/_koreansmiledental/";
 
-function GalleryPage() {
+function InstagramPage() {
   return (
     <>
       <section className="bg-secondary py-28">
         <div className="container-luxe">
-          <div className="eyebrow mb-6">Smile Gallery</div>
+          <div className="eyebrow mb-6">Instagram</div>
           <h1 className="font-display text-5xl md:text-7xl max-w-3xl leading-[1.05]">
-            Quiet transformations, <span className="italic">remarkable results.</span>
+            Real smiles, <span className="italic">shared daily.</span>
           </h1>
           <p className="mt-8 max-w-xl text-muted-foreground leading-relaxed">
-            Every smile here belongs to a real patient who placed their trust in our team.
-            Browse a selection of recent work — and imagine what's possible for yours.
+            Follow <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="link-underline">@_koreansmiledental</a> for
+            patient transformations, treatment insights and a glimpse inside our Kilimani clinic.
           </p>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary mt-10 inline-flex"
+          >
+            <Instagram size={16} /> Follow on Instagram
+          </a>
         </div>
       </section>
 
       <section className="py-20 container-luxe">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ITEMS.map((item, i) => (
-            <figure key={i} className="group">
-              <div className="aspect-[4/5] overflow-hidden bg-muted">
-                <img
-                  src={item.src}
-                  alt={item.label}
-                  loading="lazy"
-                  width={item.w}
-                  height={item.h}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
-              </div>
-              <figcaption className="mt-4 flex items-center justify-between">
-                <span className="eyebrow">Case {String(i + 1).padStart(2, "0")}</span>
-                <span className="text-sm font-display">{item.label}</span>
-              </figcaption>
-            </figure>
-          ))}
+        <div className="max-w-[540px] mx-auto bg-muted border border-border">
+          <iframe
+            src="https://www.instagram.com/_koreansmiledental/embed"
+            title="Korean Smile Dental on Instagram"
+            className="w-full"
+            style={{ height: "780px", border: 0 }}
+            loading="lazy"
+            scrolling="no"
+            allowTransparency
+          />
         </div>
+        <p className="text-center text-xs text-muted-foreground mt-6 tracking-[0.18em] uppercase">
+          87 posts · 1,141 followers · Kilimani, Nairobi
+        </p>
       </section>
 
       <section className="py-28 container-luxe text-center bg-muted">
