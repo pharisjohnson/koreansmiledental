@@ -143,11 +143,11 @@ function HomePage() {
         <div className="container-luxe">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <div className="eyebrow text-background/60 mb-3">Smile Gallery</div>
-              <h2 className="font-display text-4xl md:text-5xl">Real smiles, refined.</h2>
+              <div className="eyebrow text-background/60 mb-3">Instagram</div>
+              <h2 className="font-display text-4xl md:text-5xl">@_koreansmiledental</h2>
             </div>
             <Link to="/gallery" className="text-xs tracking-[0.18em] uppercase font-medium link-underline">
-              View gallery →
+              View feed →
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-4">
