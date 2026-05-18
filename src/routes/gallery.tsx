@@ -3,7 +3,7 @@ import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
 import smile3 from "@/assets/smile-3.jpg";
 import veneers from "@/assets/veneers.jpg";
-import hero from "@/assets/hero-smile.jpg";
+import hero from "@/assets/hero-smile.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
