@@ -7,7 +7,9 @@ export function Footer() {
     <footer className="bg-foreground text-background mt-32">
       <div className="container-luxe py-20 grid md:grid-cols-4 gap-12">
         <div className="md:col-span-2 max-w-sm">
-          <div className="font-display text-2xl mb-3">Korean Smile Dental</div>
+          <div className="inline-block bg-background p-4 mb-5 rounded-sm">
+            <img src={logo} alt="Korean Smile Dental Clinic" className="h-16 w-auto" />
+          </div>
           <p className="text-sm text-background/70 leading-relaxed">
             Premium Korean-inspired dental care. Cosmetic, restorative and orthodontic
             treatments delivered with the precision and discretion of a modern Seoul clinic.
