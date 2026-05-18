@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -30,9 +31,8 @@ export function Header() {
       }`}
     >
       <div className="container-luxe flex items-center justify-between h-20">
-        <Link to="/" className="flex flex-col leading-none">
-          <span className="font-display text-xl tracking-tight">Korean Smile</span>
-          <span className="eyebrow text-[0.6rem] mt-1">Dental Clinic</span>
+        <Link to="/" className="flex items-center gap-2 leading-none">
+          <img src={logo} alt="Korean Smile Dental Clinic" className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
