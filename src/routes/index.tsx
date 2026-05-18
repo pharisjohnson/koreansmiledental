@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Sparkles, ShieldCheck, HeartPulse } from "lucide-react";
-import heroImg from "@/assets/hero-smile.jpg";
+import heroImg from "@/assets/hero-smile.png";
 import veneersImg from "@/assets/veneers.jpg";
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
