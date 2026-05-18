@@ -32,7 +32,7 @@ export function Header() {
     >
       <div className="container-luxe flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-2 leading-none">
-          <img src={logo} alt="Korean Smile Dental Clinic" className="h-12 w-auto" />
+          <img src={logo} alt="Korean Smile Dental Clinic" className="h-18 w-auto" style={{ height: "4.5rem" }} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
